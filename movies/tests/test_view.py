@@ -68,7 +68,7 @@ class TestParhamView(TestCase):
         response = self.client.put(url, data=data)
         print("response", dir(response))
         print(response.status_code)
-        assert response.status_code == 200
+        assert response.status_code == 400
 
     def test_UpdateMovieFail(self):
         user1 = mixer.blend(Movie, )
